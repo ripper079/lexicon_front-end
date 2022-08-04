@@ -1,0 +1,202 @@
+/* ------                GLOBAL setttings              ----- */
+:root {
+	
+    /* Color variables */
+    /* General */
+    --content-in-border-color: #DDE2CC;
+    --border-color: darkgrey;
+
+    /* Header & Nav */
+    --navbar-text-color: #1d1c1c;
+    --navbar-hover-text-color: rgb(44, 230, 20);
+    --navbar-bakground-color: #EA700D;
+
+    /* Main */
+    --main-bakground-color: #FED966;    
+
+    /* Aside */
+    --aside-bakground-color: #C4D59F;
+
+    /* Footer */
+    --foter-bakground-color: #7030A0;
+
+
+    /* Button colors */
+    --mybutton-submit-color: rgb(96, 207, 86);
+    --mybutton-reset-color: rgb(219, 91, 91); 
+    --mybutton-hover-color: rgb(236, 236, 15);
+
+    /* Following 2 lines centers the page */
+    width: 1024px;    
+	margin: auto;
+}
+
+/* Re-setting all elements */
+* {
+    box-sizing: border-box;    
+	padding: 0;
+	margin: 0;
+}
+
+body {    
+	font-family: sans-serif; 
+       
+    display: grid;
+    grid-template-areas: 
+    'rubrik rubrik' 
+    'huvudinnehall sidobar'
+    'fotnot fotnot';
+}
+
+footer, main, aside, nav {
+    color: #000;    
+    padding: 20px;
+}
+
+main {
+    grid-area: huvudinnehall;
+    background-color: var(--main-bakground-color);    
+}
+
+aside {
+    grid-area: sidobar;
+    background-color: var(--aside-bakground-color);
+}
+
+aside > div {
+    padding: 5px;
+    border: 2px var(--border-color) solid;
+}
+
+aside > div > ul > li 
+{    
+    list-style-type: none;
+    padding: 5px 0px;    
+}
+
+aside > div > ul > ol > li {
+    list-style-type: none;
+}
+
+aside > div > ul  > li > ol {
+    list-style-type: none;
+}
+
+aside > div > ul > li >  ol > li > p:nth-child(even) {
+   color: red;
+}
+
+aside > div > ul > li >  ol > li > p:nth-child(odd) {
+    color: green;
+ }
+
+footer {
+    grid-area: fotnot;
+    background-color: var(--foter-bakground-color);
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: rubrik;
+ 
+    background-color: var(--navbar-bakground-color);
+}
+
+main div {
+    display: flex;    
+}
+
+li, a {
+    font-size: 1rem;    
+    color: var(--navbar-text-color);
+    text-decoration: none;    
+}
+
+header h1 {
+    padding-left: 5px;
+    padding-right: 15px;    
+}
+
+header nav ul {
+    list-style: none;        
+}
+
+header nav ul li,header nav ol li {
+    /* Align side by side */
+    display: inline-block;
+}
+
+header nav ul li a:hover {
+    color: var(--navbar-hover-text-color); 
+}
+
+header > a {
+    margin-left: auto;
+    padding-right: 5px;
+}
+
+header a:hover {
+    color: var(--navbar-hover-text-color);    
+}
+
+main h2 {
+    margin: 10px;;
+    padding: 5px;
+    display: inline;       
+    border: 2px var(--border-color) solid;      
+    background-color: var(--content-in-border-color);
+}
+
+main p {
+    background-color: var(--content-in-border-color);
+    margin: 10px;
+    padding: 5px;
+}
+
+main > p {    
+    border: 2px var(--border-color) solid;      
+}
+
+main article {
+    margin: 10px;;
+    padding: 5px;
+    border: 2px var(--border-color) solid;
+    background-color: var(--content-in-border-color);
+    /* All flex items have equal size */
+    flex: 1;
+}
+
+main form {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+#mybuttonreset {
+    background-color: var(--mybutton-reset-color);    
+}
+
+#mybuttonsubmit {
+    background-color: var(--mybutton-submit-color);
+}
+
+.mybuttons {
+    padding: 4px; 
+    border-radius: 8px;  
+}
+
+.mybuttons:hover {
+    color: var(--mybutton-hover-color);
+}
+
+#loginheader {
+    text-transform: uppercase;
+}
+
+#secondparagaph {
+    font-weight: bold;
+    color: blue;
+}
